@@ -1,0 +1,107 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    background-image: linear-gradient(to bottom right, rgb(235, 76, 171), rgb(227, 77, 171), rgb(218, 78, 170), rgb(210, 80, 170), rgb(202, 81, 170), rgb(193, 82, 170), rgb(185, 83, 169), rgb(176, 84, 169), rgb(168, 85, 169), rgb(160, 87, 169), rgb(151, 88, 168), rgb(143, 89, 168));
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+.lead {
+    font-family: 'Quicksand';
+}
+
+.header-bar {
+    position: relative;
+    width: 70%;
+    min-width: 300px;
+    height: 50px;
+    border: 10px solid transparent;
+    border-top: 10px solid #fffa;
+    border-left: 10px solid #fffa;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25) inset;
+    background-color: #faa;
+}
+
+.header-bar::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 30%;
+    height: 49px;
+    border: 10px solid transparent;
+    border-bottom: 10px solid #fffa;
+    border-right: 10px solid #fffa;
+    transition: 0.3s linear all;
+}
+
+.header-bar>.logo {
+    position: absolute;
+    top: calc(50% - 20px);
+    left: 10px;
+    transform: translateY(-50%);
+    color: #fffc;
+    font-family: 'Parisienne', cursive;
+    cursor: default;
+    user-select: none;
+}
+
+.slider-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+.slider-menu>li {
+    display: inline-flex;
+    padding: 14px;
+    margin-left: 2px;
+    font-family: 'Quicksand', sans-serif;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s linear all;
+    user-select: none;
+}
+
+.slider-menu>li:hover {
+    color: rgb(216, 132, 6);
+    box-shadow: 0 50px 5px rgba(255, 255, 255, 0.15) inset;
+}
+
+.name-tag p {
+    color: rgb(221, 28, 28);
+    font-family: monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }
